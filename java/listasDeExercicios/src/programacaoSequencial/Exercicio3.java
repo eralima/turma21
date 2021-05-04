@@ -2,7 +2,7 @@ package programacaoSequencial;
 
 import java.util.Scanner;
 
-public class exercicio3 {
+public class Exercicio3 {
 
 	public static void main(String[] args) {
 		/*Faça um sistema que leia o tempo de duração de um evento em uma fábrica expressa em segundos 

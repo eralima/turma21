@@ -32,7 +32,8 @@ public class exercicio6 {
 		double distancia = Math.sqrt(Math.pow((xPonto2 - xPonto1), 2) + Math.pow((yPonto2 - yPonto1), 2) );
 		
 		//saída
-		System.out.print("A distância entre os pontos é de " + decimal.format(distancia));
+		System.out.println("A distância entre os pontos é de " + decimal.format(distancia));
+		System.out.printf("A distância entre os pontos é de %.2f",distancia);
 				
 		leia.close();	
 	}
