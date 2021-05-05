@@ -26,8 +26,11 @@ public class Exercicio3 {
 		else if (idade >= 15 && idade <= 17){
 			System.out.print("A sua categoria é a juvenil");	
 		}
+		else if (idade >= 18 && idade <= 25){
+			System.out.print("A sua categoria é a juvenil");	
+		}
 		else {
-			System.out.print("A sua categoria é a adulto");	
+			System.out.print("Não se enquadra em nenhuma categoria");	
 		}
 		
 		leia.close();
