@@ -30,10 +30,6 @@ public class Exercicio3 {
 		}
 		
 		System.out.printf("\nA matriz 3 x 3 possui %d valores maiores que 10",valoresMaiores10);
-		
-		
-		
-		
 	}
 
 }

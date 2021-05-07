@@ -13,7 +13,7 @@ public class Exercicio2 {
 		Scanner leia = new Scanner(System.in);
 		
 		//variáveis
-		int numeros[]= new int[6];
+		int numeros[]= new int[5];
 		int somaPares = 0;
 		int quantidadeImpares = 0;
 		
@@ -31,13 +31,20 @@ public class Exercicio2 {
 			
 		}
 		System.out.print("Os números pares digitados foram: ");
-		for (int i = 0; i < numeros.length; i++) {
+		
+		for (int i : numeros) {
+			if (i%2 == 0 && i != 0 ) {
+				System.out.print(i + " ");
+				
+			}	
+			
+		}
+		/*for (int i = 0; i < numeros.length; i++) {
 			if (numeros[i]%2 == 0 && numeros[i] != 0 ) {
 				System.out.print(numeros[i] + " ");
 				
 			}	
-		}
-		
+		}*/
 		
 		System.out.printf("\nA soma dos números pares digitados é %d", somaPares);
 		System.out.printf("\nForam digitados %d números ímpares", quantidadeImpares);

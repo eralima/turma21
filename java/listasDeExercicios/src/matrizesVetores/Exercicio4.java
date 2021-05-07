@@ -68,7 +68,7 @@ public class Exercicio4 {
 		       System.out.print("Informe o valor da constante: ");
 		       constante = leia.nextDouble();
 		       
-		       System.out.printf("\nA matriz resultante da adição da constante a matriz 1 %f é: \n", constante);
+		       System.out.printf("\nA matriz resultante da adição da constante a matriz 1 %.1f é: \n", constante);
 		       for (int linha = 0; linha < 2; linha++) {
 					for (int coluna = 0; coluna < 2; coluna++) {
 						matriz1[linha][coluna] = matriz1[linha][coluna] + constante;
