@@ -21,8 +21,8 @@ public class Exercicio4 {
 			
 			//variaveis
 			int idade;
-			char sexo;
-			char caracteristica;
+			char sexo; //1 (feminino), 2 (masculino) ou 3 (Outros)
+			char caracteristica; //1 (calma), 2 (nervosa) ou 3(agressiva)
 			
 			int quantidadePessoas = 1;
 			int pessoasCalmas = 0;

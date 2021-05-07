@@ -7,6 +7,7 @@ public class Exercicio6 {
 		//Escrever um programa que receba vários números inteiros no teclado. 
 		//E no final imprimir a média dos números múltiplos de 3. Para sair digitar 0(zero).(DO...WHILE)
 		
+		//O System.in é um construtor
 		Scanner leia = new Scanner (System.in);
 		
 		//variaveis
@@ -18,7 +19,7 @@ public class Exercicio6 {
 			System.out.print("Digite um número inteiro: ");
 			numero = leia.nextInt();
 			
-			if(numero%3 == 0) {
+			if(numero%3 == 0 && numero != 0) {
 				soma = soma + numero;
 				quantidadeNumeros++;	
 			}
@@ -26,7 +27,7 @@ public class Exercicio6 {
 		} while (numero != 0 );
 		
 		double media = soma/(quantidadeNumeros - 1);
-		System.out.printf("\nA média dos números digitados múltiplos de 3 é %f", media);
+		System.out.printf("\nA média dos números digitados múltiplos de 3 é %.1f", media);
 		leia.close();
 	}
 
