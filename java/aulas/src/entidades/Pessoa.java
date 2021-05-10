@@ -28,11 +28,11 @@ public class Pessoa {
 		if(genero == 'M') {
 			System.out.println("Seu amigo se identifica com o gênero masculino!");
 		}
-		else if (genero == 'M'){
+		else if (genero == 'F'){
 			System.out.println("Seu amigo se identifica com o gênero feminino!");	
 		}
 		else {
-			System.out.println("Seu amigo se identifica com o outro gênero!");	
+			System.out.println("Seu amigo se identifica com outro gênero!");	
 		}
 		
 	}
