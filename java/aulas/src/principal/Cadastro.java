@@ -31,6 +31,9 @@ public class Cadastro {
 		pessoa.genero(pessoa.genero);
 		pessoa.vivoMorto(pessoa.estado);
 		
+		//Impressão para verificar o atributo boolean vivo
+		System.out.println(pessoa.vivo);
+		
 		
 		leia.close();
 	}
