@@ -29,8 +29,8 @@ public class Exercicio4 {
 		
 		for (int linha = 0; linha < 2; linha++) {
 			for (int coluna = 0; coluna < 2; coluna++) {
-				matriz1[linha][coluna] = (random.nextDouble())*100;
-				matriz2[linha][coluna] = (random.nextDouble())*100;
+				matriz1[linha][coluna] = (random.nextDouble())*10;
+				matriz2[linha][coluna] = (random.nextDouble())*10;
 			}
 		}
 		
@@ -41,7 +41,7 @@ public class Exercicio4 {
 					+ "(3) adicionar uma constante as duas matrizes \n(4) imprimir as matrizes");
 			System.out.print("Escolha uma das opções do menu acima. Digite 1, 2, 3 ou 4: ");
 			opcaoMenu = leia.next().charAt(0);
-			
+	
 			switch (opcaoMenu) {
 			case '1':
 				System.out.println("\nA matriz resultante da soma das matrizes é: ");
@@ -68,7 +68,7 @@ public class Exercicio4 {
 		       System.out.print("Informe o valor da constante: ");
 		       constante = leia.nextDouble();
 		       
-		       System.out.printf("\nA matriz resultante da adição da constante a matriz 1 %.1f é: \n", constante);
+		       System.out.printf("\nA matriz resultante da adição da constante %.1f a matriz 1 é: \n", constante);
 		       for (int linha = 0; linha < 2; linha++) {
 					for (int coluna = 0; coluna < 2; coluna++) {
 						matriz1[linha][coluna] = matriz1[linha][coluna] + constante;
@@ -76,7 +76,7 @@ public class Exercicio4 {
 					}
 					System.out.println();
 				}
-		       System.out.printf("\nA matriz resultante da adição da constante a matriz 2 %.1f é: \n", constante);
+		       System.out.printf("\nA matriz resultante da adição da constante %.1f a matriz 2 é: \n", constante);
 		       for (int linha = 0; linha < 2; linha++) {
 					for (int coluna = 0; coluna < 2; coluna++) {
 						matriz2[linha][coluna] = matriz2[linha][coluna] + constante;
