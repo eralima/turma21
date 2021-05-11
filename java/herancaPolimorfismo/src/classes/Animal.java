@@ -1,6 +1,7 @@
 package classes;
 
-public class Animal {
+//com o abstract não sera mais possível criar um objeto do tipo Animal na classe principal
+public abstract class Animal {
 	
 	/*Crie uma hierarquia de classes conforme abaixo com os seguintes atributos e comportamentos (observe a tabela), 
 	 * utilize os seus conhecimentos e distribua as características de forma que tudo o que for 

@@ -1,6 +1,6 @@
 package classes;
-
-public class Cavalo extends Animal{
+//final indica que nenhuma outra classe pode extender da classe Cavalo
+public final class Cavalo extends Animal{
 
 	//construtor
 	public Cavalo(String nome, int idade) {

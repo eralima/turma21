@@ -11,6 +11,7 @@ public class Cachorro extends Animal{
 		System.out.println("\n\nO cachorro está correndo...");
 	}
 	
+	@Override
 	public void emitirSom() {
 		System.out.printf("Au Au! Au Au! Au Au!");
 	}
