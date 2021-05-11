@@ -1,4 +1,4 @@
-package projetoEscola;
+package procedural;
 
 import java.util.Calendar;
 import java.util.Locale;
@@ -258,3 +258,4 @@ public class ProjetoEscola {
 		return notaAtual;
 	}
 }
+
