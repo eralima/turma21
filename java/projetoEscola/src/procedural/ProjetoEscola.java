@@ -225,8 +225,6 @@ public class ProjetoEscola {
 		double excesso = 0.0;
 
 		while (continuar != 'N' && indice < 10) {
-			System.out.printf("\nTotal atual: %.2f ", notaAtual);
-			System.out.printf("\nMOVIMENTO %d - Digite I (inclusão de nota) ou R (retirada nota): ", (indice + 1));
 			movimentos[indice] = leia.next().toUpperCase().charAt(0);
 			System.out.print("Valor movimento: ");
 			pontos[indice] = leia.nextDouble();

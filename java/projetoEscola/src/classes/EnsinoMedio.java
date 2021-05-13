@@ -1,9 +1,14 @@
 package classes;
 
-public class EnsinoMedio {
+public class EnsinoMedio extends Estudante{
 	//atributos
-	private int contadorBoletim;
+	private int contadorBoletim = 0;
 	
+	//construtor
+	public EnsinoMedio(int matricula, String cpf) {
+		super(matricula, cpf);
+	}
+
 	//encapsulamento (getters and setters)
 	public int getContadorBoletim() {
 		return contadorBoletim;
@@ -14,8 +19,11 @@ public class EnsinoMedio {
 	}
 	
 	//métodos
-	public void pedirBoletim() {
-		
+	public void pedirBoletim(char imprimirBoletim) {
+		if(imprimirBoletim == 'S') {
+			contadorBoletim = contadorBoletim + 1;
+			setContadorBoletim(2);			
+		}
 	}
 
 }
