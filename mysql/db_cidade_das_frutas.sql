@@ -6,16 +6,18 @@ use db_cidade_das_frutas;
 -- crie uma tabela de categorias com 3 atributos relevantes para se trabalhar com o serviço dessa quitanda
 create table tb_categoria (
 	id bigint auto_increment,
-    tipo_produto varchar(255) not null,
+    descricao varchar(255) not null,
+    delivery boolean not null,
+    promocao_quarta boolean not null,
     primary key (id)
 );
 
 -- popule esta tabela categoria com até 5 dados.
-insert into tb_categoria (tipo_produto) values ("Frutas");
-insert into tb_categoria (tipo_produto) values ("Verduras");
-insert into tb_categoria (tipo_produto) values ("Legumes");
-insert into tb_categoria (tipo_produto) values ("Condimentos");
-insert into tb_categoria (tipo_produto) values ("Ovos");
+insert into tb_categoria (descricao, delivery, promocao_quarta) values ("Frutas", true, true);
+insert into tb_categoria (descricao, delivery, promocao_quarta) values ("Verduras", false, true);
+insert into tb_categoria (descricao, delivery, promocao_quarta) values ("Legumes", true, true);
+insert into tb_categoria (descricao, delivery, promocao_quarta) values ("Condimentos", true, false);
+insert into tb_categoria (descricao, delivery, promocao_quarta) values ("Ovos", false, false);
 
 select * from tb_categoria;
 
@@ -42,7 +44,6 @@ insert into tb_produtos (nome, categoria, organico, preco, peso, quantidade_prod
 insert into tb_produtos (nome, categoria, organico, preco, peso, quantidade_produto, categoria_id) values ("Cominho em pó", "Temperos secos", false, 4.99, 40, 600, 4);
 insert into tb_produtos (nome, categoria, organico, preco, peso, quantidade_produto, categoria_id) values ("Repolho", "Verduras frescas", true, 6.29, 400, 350, 2);
 insert into tb_produtos (nome, categoria, organico, preco, peso, quantidade_produto, categoria_id) values ("Ovos vermelhos 12 unidades", "Ovos de galinha", true, 10.90, null, 350, 5);
-insert into tb_produtos (nome, categoria, organico, preco, peso, quantidade_produto, categoria_id) values ("Sal Rosa do Himalaia", "Sal", false, 8.39, 500, 150, 4);
 
 select * from tb_produtos;
 
@@ -58,6 +59,12 @@ select * from tb_produtos where nome like "c%"; -- somente alimentos que começa
 select * from tb_produtos where nome like "%c%"; -- somente alimentos que tem letra c
 
 -- faça um um select com inner join entre tabela categoria e produto.
-select nome, categoria, organico, preco, peso as peso_gramas, tb_categoria.tipo_produto
+select nome, categoria, organico, preco, peso as peso_gramas, tb_categoria.descricao as categoria_geral
 from tb_produtos inner join tb_categoria on  tb_categoria.id = tb_produtos.categoria_id;
+
+-- faça um select onde traga todos os Produtos de uma categoria específica (exemplo todos os produtos que são legumes)
+select nome, categoria, organico, preco, peso as peso_gramas, tb_categoria.descricao as categoria_geral
+from tb_produtos inner join tb_categoria on  tb_categoria.id = tb_produtos.categoria_id
+where tb_categoria.descricao like "Legumes";
+
 
